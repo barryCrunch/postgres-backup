@@ -1,1 +1,1 @@
-* * * * * $(which python3) /scripts/backup.py > /scripts/cron.log
+* * * * * . $HOME/.profile; $(which python3) /scripts/backup.py > /scripts/cron.log
