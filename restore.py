@@ -5,6 +5,10 @@ from azure.storage.blob import BlockBlobService, PublicAccess
 
 def restore_db():
     try:
+        # Define block_blob_service
+        block_blob_service = BlockBlobService(account_name=os.environ['ACCOUNT_NAME'], account_key=os.environ['ACCOUNT_KEY'])
+        container_name = os.environ['CONTAINER_NAME']
+
         # Use Argparse to grab file name to pull from azure
         parser = argparse.ArgumentParser()
         parser.add_argument("file_name", help="File you want to restore from Azure")
