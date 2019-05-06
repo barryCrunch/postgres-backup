@@ -12,6 +12,7 @@ RUN apt-get update && \
     apt-get install -y postgresql-client-10 && \
     apt-get install build-essential libssl-dev libffi-dev python3-dev
 RUN pip3 install sh azure
+RUN apt-get install cron
 
 RUN echo "update"
 RUN mkdir /scripts
