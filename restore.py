@@ -21,8 +21,8 @@ def restore_db():
         block_blob_service.get_blob_to_path(container_name, args.file_name, local_path + args.file_name)
 
         with gzip.open(args.file_name, 'rb') as f:
-                psql('h', os.environ['POSTGRESQL_HOST'], '-U', os.environ['DB_USER'], _in=f)
-                
+                psql('-h', os.environ['POSTGRESQL_HOST'], '-U', os.environ['DB_USER'], _in=f)
+
     except Exception as e:
         print(e)
 
