@@ -13,7 +13,9 @@ There is also the ability to restore from any backup located in the Aure Blob st
 ---
 
 ## How to run the container
-```docker run -d -t --env-file env.file mkbarry/postgres-backup:latest ./startup.sh```
+```
+docker run -d -t --env-file env.file mkbarry/postgres-backup:latest ./startup.sh
+```
 This will start the cron job and kick off the backup schedule of every 30 minutes on the hour/half hour. If you would like to just peform a manual backup then just exec into the container and execute the python script.
 ```
 docker exec -it {container-name} /bin/bash
