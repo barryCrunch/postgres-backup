@@ -3,7 +3,7 @@ from sh import psql
 from azure.storage.blob import BlockBlobService, PublicAccess
 
 
-def restore():
+def restore_db():
     try:
         # Use Argparse to grab file name to pull from azure
         parser = argparse.ArgumentParser()
@@ -27,4 +27,4 @@ def restore():
         print(e)
 
 if __name__ == '__main__':
-    backup_db()
+    restore_db()
