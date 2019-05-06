@@ -24,4 +24,4 @@ RUN chmod 0644 /etc/cron.d/cron_config
 
 WORKDIR /scripts
 
-CMD starup.sh
+CMD startup.sh
