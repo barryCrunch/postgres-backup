@@ -21,5 +21,6 @@ ADD restore.py /scripts
 ADD cron_config /etc/cron.d/cron_config
 ADD startup.sh /scripts/startup.sh
 RUN chmod 0644 /etc/cron.d/cron_config
+RUN ["chmod", "+x", "/scripts/startup.sh"]
 
 WORKDIR /scripts
