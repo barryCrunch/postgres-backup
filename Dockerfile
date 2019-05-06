@@ -23,5 +23,3 @@ ADD startup.sh /scripts/startup.sh
 RUN chmod 0644 /etc/cron.d/cron_config
 
 WORKDIR /scripts
-
-CMD startup.sh
