@@ -21,6 +21,7 @@ ADD restore.py /scripts
 COPY cronjob /etc/cron.d/backup-task
 RUN chmod 0644 /etc/cron.d/backup-task
 RUN crontab /etc/cron.d/backup-task
+RUN service cron start
 CMD cron && tail -f /var/log/cron.log
 
 WORKDIR /scripts
