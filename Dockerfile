@@ -16,5 +16,6 @@ RUN pip3 install azure
 
 RUN mkdir /scripts
 ADD backup.py /scripts
+ADD restore.py /scripts
 
 WORKDIR /scripts
