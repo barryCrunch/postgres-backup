@@ -17,5 +17,10 @@ RUN echo "update"
 RUN mkdir /scripts
 ADD backup.py /scripts
 ADD restore.py /scripts
+ADD cron_config /etc/cron.d/cron_config
+ADD startup.sh /scripts.startup.sh
+RUN chmod 0644 /etc/cron.d/cron_config
 
 WORKDIR /scripts
+
+CMD starup.sh
