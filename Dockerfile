@@ -14,6 +14,7 @@ RUN apt-get install build-essential libssl-dev libffi-dev python3-dev
 RUN pip3 install sh
 RUN pip3 install azure
 
+RUN echo "update"
 RUN mkdir /scripts
 ADD backup.py /scripts
 ADD restore.py /scripts
