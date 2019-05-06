@@ -17,3 +17,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: Docker@2
+  inputs:
+    containerRegistry: '07fe3c4c-e3fd-4821-bb1e-f862ae0a0875'
+    command: 'build'
+    Dockerfile: 'Dockerfile'
+    tags: 'mkbarry/$(IMAGE_NAME):v$(Build.BuildNumber)'
